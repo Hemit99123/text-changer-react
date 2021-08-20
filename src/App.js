@@ -15,6 +15,9 @@ function App() {
         <CopyToClipboard text={ready} onCopy={() => setCopied(true)}>
    <p>{ready}</p> 
       </CopyToClipboard>
+
+      {copied ? <p style={{ color: "blue" }}>Copied text.</p> : null}
+
     <br />
     <br />
     <br />
