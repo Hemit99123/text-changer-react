@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
         <CopyToClipboard text={ready} onCopy={() => setCopied(true)}>
-   <p>{ready}</p> 
+        <button id='reg'>  <p>button</p> </button>
       </CopyToClipboard>
 
       {copied ? <p style={{ color: "blue" }}>Copied text.</p> : null}
