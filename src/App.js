@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 function App() {
+
+  const [ready, setReady] = useState('Button is not pressed')
+  const [copied, setCopied] = useState([])
+  let ready2 = "Button is pressed"
+  
+  const handleButton = () => {
+    setReady(ready2)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <CopyToClipboard text={ready} onCopy={() => setCopied(true)}>
+   <p>{ready}</p> 
+      </CopyToClipboard>
+    <br />
+    <br />
+    <br />
+    <button onClick={handleButton}>Button</button>
+    <br />
+    <br />
+
     </div>
   );
 }
