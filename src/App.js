@@ -4,7 +4,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 function App() {
 
   const [ready, setReady] = useState('Button is not pressed')
-  const [copied, setCopied] = useState([])
+  const [copied, setCopied] = useState(false)
   let ready2 = "Button is pressed"
   
   const handleButton = () => {
